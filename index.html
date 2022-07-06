@@ -17,15 +17,19 @@
   </head>
   <body>
     <!--Шапка сайта-->
-    <header class="header">
-      <div class="container main-header">
-        <nav class="main-nav">
-          <a class="logo link" href="./index.html">Web<span class="header-logo">Studio</span></a>
+    <header class="page-header">
+      <div class="page-header__content container">
+        <nav class="page-header__nav">
+          <a class="logo" href="./index.html">Web<span class="page-header__logo">Studio</span></a>
 
           <ul class="site-nav list">
-            <li class="item current"><a class="link current" href="./index.html">Студия</a></li>
-            <li class="item"><a class="link" href="./portfolio.html">Портфолио</a></li>
-            <li class="item"><a class="link" href="">Контакты</a></li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
           </ul>
         </nav>
 
@@ -66,7 +70,7 @@
       <!--Особенности-->
       <section class="section no-padding">
         <div class="container">
-          <h2 class="section-title hidden">Особенности</h2>
+          <h2 class="section-title visually-hidden">Особенности</h2>
           <ul class="features list">
             <li class="item">
               <div class="div-features">
@@ -481,7 +485,7 @@
     <footer class="footer">
       <div class="container nav">
         <div class="footer-address">
-          <a class="logo link" href="./index.html">Web<span class="footer-logo">Studio</span></a>
+          <a class="logo" href="./index.html">Web<span class="page-footer__logo">Studio</span></a>
           <address>
             <ul class="contacts-footer list">
               <li class="item">
@@ -542,7 +546,7 @@
 
           <form class="form-subscription js-speaker-form" autocomplete="off">
             <div class="form-subscription-field">
-              <label class="hidden" for="email"></label>
+              <label class="visually-hidden" for="email"></label>
               <input
                 class="subscription-input"
                 type="email"
