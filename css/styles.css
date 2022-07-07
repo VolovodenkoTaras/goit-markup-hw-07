@@ -170,7 +170,7 @@ img {
 }
 
 /* Логотип */
-.logo-link {
+.logo {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -179,11 +179,11 @@ img {
   text-decoration: none;
 }
 
-.logo-link--black {
+.logo--black {
   color: var(--primary-black-color);
 }
 
-.logo-link--white {
+.logo--white {
   color: var(--primary-white-color);
 }
 
@@ -808,7 +808,7 @@ img {
   display: flex;
 }
 
-.about__logo-link {
+.page-footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 }
