@@ -20,10 +20,14 @@
     <header class="page-header">
       <div class="page-header__content container">
         <nav class="page-header__nav">
-          <a class="logo" href="./index.html">Web<span class="page-header__logo">Studio</span></a>
+          <a class="logo-link" href="./index.html"
+            >Web<span class="logo-link--black">Studio</span></a
+          >
 
           <ul class="site-nav list">
-            <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студия</a></li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./index.html">Студия</a>
+            </li>
             <li class="site-nav__item">
               <a class="site-nav__link site-nav__link--current" href="./portfolio.html"
                 >Портфолио</a
@@ -33,18 +37,18 @@
           </ul>
         </nav>
 
-        <ul class="contacts-header list">
-          <li class="item">
-            <a class="link" href="mailto:info@devstudio.com">
-              <svg class="svg-mail">
+        <ul class="header-contacts list">
+          <li class="header-contacts__item">
+            <a class="header-contacts__link" href="mailto:info@devstudio.com">
+              <svg class="header-contacts__icon-mail">
                 <use href="./images/icons.svg#contacts-mail"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="item">
-            <a class="link" href="tel:+380961111111">
-              <svg class="svg-phone">
+          <li class="header-contacts__item">
+            <a class="header-contacts__link" href="tel:+380961111111">
+              <svg class="header-contacts__icon-phone">
                 <use href="./images/icons.svg#contacts-phone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -288,33 +292,35 @@
     </main>
 
     <!--Подвал-->
-    <footer class="footer">
-      <div class="container nav">
-        <div class="footer-address">
-          <a class="logo" href="./index.html">Web<span class="page-footer__logo">Studio</span></a>
+    <footer class="page-footer">
+      <div class="page-footer__content container">
+        <div class="about">
+          <a class="logo-link about__logo-link" href="./index.html"
+            >Web<span class="logo-link--white">Studio</span></a
+          >
           <address>
-            <ul class="contacts-footer list">
-              <li class="item">
+            <ul class="footer-contacts list">
+              <li class="footer-contacts__item">
                 <a
-                  class="location link"
+                  class="footer-contacts__link footer-contacts__link--white"
                   href="https://goo.gl/maps/X2jcXpadv5ityZMy6"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="item">
-                <a class="contacts link" href="mailto:info@example.com">info@example.com</a>
+              <li class="footer-contacts__item">
+                <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a>
               </li>
-              <li class="item">
-                <a class="contacts link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="footer-contacts__item">
+                <a class="footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
 
         <div class="footer-social">
-          <p class="footer-social-text">присоединяйтесь</p>
+          <p class="footer-social__text">присоединяйтесь</p>
           <ul class="social-links-webstudio list">
             <li class="item instagram">
               <a class="link join-link" href="" target="_blank" rel="nofollow noopener noreferrer">

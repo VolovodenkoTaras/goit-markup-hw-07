@@ -170,23 +170,25 @@ img {
 }
 
 /* Логотип */
-.logo {
+.logo-link {
   color: var(--accent-color);
-
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: calc(35.96 / 26);
-
   text-decoration: none;
 }
 
-.page-header__logo {
+.logo-link--black {
   color: var(--primary-black-color);
 }
 
-.page-footer__logo {
+.logo-link--white {
   color: var(--primary-white-color);
+}
+
+.page-header {
+  border-bottom: 1px solid var(--header-border-bottom-color);
 }
 
 /* Навигация по сайту */
@@ -252,71 +254,44 @@ img {
 }
 /*Конец подчеркивания */
 
-.contacts-header {
+.header-contacts {
   display: flex;
   margin-left: auto;
 }
 
-.contacts-header .item:last-child {
+.header-contacts__item:last-child {
   margin-left: 50px;
 }
 
-.contacts-header .link {
+.header-contacts__link {
   color: var(--primary-text-color);
 
   font-weight: 500;
   letter-spacing: 0.02em;
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
 
   transition: color 250ms var(--cubic);
 }
 
-.contacts-header .link:hover,
-.contacts-header .link:focus {
+.header-contacts__link:hover,
+.header-contacts__link:focus {
   color: var(--accent-color);
 }
 
-/* .contacts-header .item:first-child ::before {
-  display: inline-block;
-  content: '';
-  width: 16px;
-  height: 100%;
-  margin-right: 10px;
-  background-image: url('../images/mail.svg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 16px 12px;
-} */
-
-.svg-mail {
+.header-contacts__icon-mail {
   fill: currentColor;
   width: 16px;
   height: 16px;
   margin-right: 10px;
 }
 
-/* .contacts-header .item:last-child ::before {
-  display: inline-block;
-  content: '';
-  width: 10px;
-  height: 100%;
-  margin-right: 10px;
-  background-image: url('../images/phone.svg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 10px 16px;
-} */
-
-.svg-phone {
+.header-contacts__icon-phone {
   fill: currentColor;
   width: 16px;
   height: 16px;
   margin-right: 10px;
-}
-
-.page-header {
-  border-bottom: 1px solid var(--header-border-bottom-color);
 }
 
 /* Герой */
@@ -823,54 +798,44 @@ img {
 }
 
 /* Подвал */
-.footer {
+.page-footer {
   background-color: var(--footer-bg-color);
 }
 
-.footer .container {
+.page-footer__content {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.footer > .nav {
   display: flex;
 }
 
-.footer-address {
-  margin-right: 70px;
-}
-
-.footer .logo {
+.about__logo-link {
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.contacts-footer .item:not(:last-child) {
+.footer-contacts__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.contacts-footer .location {
-  color: var(--primary-white-color);
-  font-style: normal;
-  line-height: calc(24 / 14);
-
-  transition: color 250ms var(--cubic);
-}
-
-.contacts-footer .contacts {
+.footer-contacts__link {
   color: var(--contacts-ft-color);
   font-style: normal;
   line-height: calc(24 / 14);
-
+  text-decoration: none;
   transition: color 250ms var(--cubic);
 }
 
-.contacts-footer .link:hover,
-.contacts-footer .link:focus {
+.footer-contacts__link--white {
+  color: var(--primary-white-color);
+}
+
+.footer-contacts__link:hover,
+.footer-contacts__link:focus {
   color: var(--accent-color);
 }
 
 .footer-social {
+  margin-left: 70px;
   margin-right: 93px;
 }
 
@@ -879,7 +844,7 @@ img {
   padding-top: 15px;
 }
 
-.footer-social-text,
+.footer-social__text,
 .footer-subscription-text {
   color: var(--primary-white-color);
   font-weight: 700;
