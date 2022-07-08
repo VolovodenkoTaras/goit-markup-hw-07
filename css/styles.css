@@ -61,11 +61,6 @@ img {
   height: auto;
 }
 
-/* Скрыл подчеркивание у ссылок */
-.link {
-  text-decoration: none;
-}
-
 /* Скрыл ненужные заголовки */
 .visually-hidden {
   position: absolute;
@@ -87,77 +82,32 @@ img {
   margin: 0;
 }
 
-/* Кнопки */
-/* Для всех кнопок */
-.button {
-  font-family: inherit;
-
-  border: 0;
-  border-radius: 4px;
-  text-align: center;
-
-  cursor: pointer;
+/* Секции */
+.section {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.hero .button,
-.modal-form .button,
-.form-subscription-field .button {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+.section--no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.section--bc-grey {
+  background-color: var(--second-grey-color);
+}
+
+.section__title {
+  color: var(--title-text-color);
 
   font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
-
-  display: block;
-  padding: 10px 32px;
-  min-width: 200px;
+  font-size: 36px;
+  line-height: calc(42.19 / 36);
   text-align: center;
 
-  margin: 0 auto;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition: background-color 250ms var(--cubic);
-}
-
-.hero .button:hover,
-.hero .button:focus,
-.modal-form .button:hover,
-.modal-form .button:focus {
-  background-color: var(--button-hover-color);
-}
-
-.form-subscription-field .button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 10px 28px;
-}
-
-.button.close-modal {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: var(--primary-white-color);
-  border: 1px solid var(--modal-window-close-border-color);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: color 250ms var(--cubic);
-}
-
-.button.close-modal:hover,
-.button.close-modal:focus {
-  color: var(--accent-color);
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 /* Контейнеры */
@@ -167,6 +117,40 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Кнопки */
+
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+
+  cursor: pointer;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+
+  display: block;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  margin: 0 auto;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms var(--cubic);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-hover-color);
 }
 
 /* Логотип */
@@ -294,6 +278,33 @@ img {
   margin-right: 10px;
 }
 
+/*Cоциальные сети -- ОБЩЕЕ */
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
+}
+
+.social__icon {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
 /* Герой */
 .hero {
   max-width: 1600px;
@@ -311,7 +322,7 @@ img {
   padding: 200px 0;
 }
 
-.hero-title {
+.hero__title {
   color: var(--primary-white-color);
 
   font-weight: 900;
@@ -359,28 +370,51 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  /* padding: 40px; */
-
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 
   transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
-.svg-close-modal {
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  border: 1px solid var(--modal-window-close-border-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: color 250ms var(--cubic);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  color: var(--accent-color);
+}
+
+.btn-close__icon {
   fill: currentColor;
   width: 18px;
   height: 18px;
 }
 
-.modal-form {
+.order {
   width: 528px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
 }
 
-.modal-form-header {
+.order__title {
   font-size: 20px;
   line-height: calc(23.44 / 20);
   color: var(--title-text-color);
@@ -389,7 +423,7 @@ img {
   text-align: center;
 }
 
-.modal-form-field {
+.order__label {
   position: relative;
 
   display: flex;
@@ -403,7 +437,7 @@ img {
   margin-bottom: 10px;
 }
 
-.modal-form-input {
+.order__input {
   min-width: 448px;
   margin: 4px 0px 0px 0px;
   padding: 12px 42px;
@@ -415,11 +449,7 @@ img {
   transition: border-color 250ms var(--cubic);
 }
 
-.modal-form-input:focus-within {
-  border-color: var(--accent-color);
-}
-
-.svg-modal-form {
+.order__icon {
   position: absolute;
   top: 65%;
   left: 12px;
@@ -432,11 +462,11 @@ img {
   transition: fill 250ms var(--cubic);
 }
 
-.modal-form-field:focus-within > .svg-modal-form {
+.order__label:focus-within > .order__icon {
   fill: var(--accent-color);
 }
 
-.modal-form-commentary {
+.order__commentary {
   min-width: 448px;
   min-height: 120px;
   margin: 4px 0px 0px 0px;
@@ -451,19 +481,20 @@ img {
   transition: border-color 250ms var(--cubic);
 }
 
-.modal-form-commentary:focus-within {
-  border-color: var(--accent-color);
-}
-
-.modal-form-field.commentary {
-  margin-bottom: 20px;
-}
-
-.modal-form-commentary::placeholder {
+.order__commentary::placeholder {
   color: var(--modal-window-commentary-text-color);
 }
 
-.modal-form-agreement {
+.order__input:focus-within,
+.order__commentary:focus-within {
+  border-color: var(--accent-color);
+}
+
+.label__commentary {
+  margin-bottom: 20px;
+}
+
+.order__agreement {
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14.06 / 12);
@@ -474,7 +505,7 @@ img {
   margin-bottom: 30px;
 }
 
-.modal-form-input-agreement {
+.order__checkbox {
   /* Скрытие стандартного чекбокса (для современных браузеров)*/
   /*  
   -moz-appearance: none;
@@ -495,7 +526,7 @@ img {
   overflow: hidden;
 }
 
-.svg-modal-form-agreement-yes {
+.order__icon-checkbox {
   fill: var(--primary-white-color);
   width: 16px;
   height: 15px;
@@ -509,50 +540,25 @@ img {
 }
 
 /* При клике на чекбоксе меняет иконку */
-.modal-form-input-agreement:checked + .svg-modal-form-agreement-yes {
+.order__checkbox:checked + .order__icon-checkbox {
   fill: var(--accent-color);
   border: none;
 }
 
-.modal-form-agreement-text {
+.order__text {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   margin-right: 5px;
 }
 
-.modal-form-agreement-terms {
+.order__link {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration-color: var(--accent-color);
   text-decoration-line: underline;
-}
-
-/* Секции */
-.section,
-.portfolio {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.no-padding {
-  padding-bottom: 0;
-}
-
-.section-title {
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42.19 / 36);
-  text-align: center;
-
-  margin-top: 0;
-  margin-bottom: 50px;
 }
 
 /* Особенности*/
@@ -563,11 +569,11 @@ img {
   padding-left: 0;
 }
 
-.features .item:not(:last-child) {
+.features__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.div-features {
+.features__box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -578,41 +584,12 @@ img {
   border-radius: 4px;
 }
 
-.svg-item-features {
+.features__icon {
   width: 70px;
   height: 70px;
 }
 
-/* .features .item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--second-grey-color);
-  border-radius: 4px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px;
-}
-
-.features > .item:nth-child(1)::before {
-  background-image: url('../images/features-antenna.svg');
-}
-
-.features > .item:nth-child(2)::before {
-  background-image: url('../images/features-clock.svg');
-}
-
-.features > .item:nth-child(3)::before {
-  background-image: url('../images/features-diagram.svg');
-}
-
-.features > .item:nth-child(4)::before {
-  background-image: url('../images/features-astronaut.svg');
-} */
-
-.features .title {
+.features__title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -623,7 +600,7 @@ img {
   margin-bottom: 10px;
 }
 
-.features .text {
+.features__text {
   font-size: 14px;
   line-height: calc(24 / 14);
 }
@@ -636,15 +613,15 @@ img {
   padding-left: 0;
 }
 
-.work > .item:not(:last-child) {
+.work__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work .work-thumb {
+.work__box {
   position: relative;
 }
 
-.work .work-text {
+.work__text {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -661,12 +638,6 @@ img {
   padding-bottom: 27px;
 }
 
-/* Вместо этого - Техника отзывчивых изображений
-.photo-work {
-  display: block;
-}
-*/
-
 /* Команда*/
 
 .team {
@@ -675,11 +646,11 @@ img {
   padding-left: 0;
 }
 
-.team > .item:not(:last-child) {
+.team__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-description {
+.team__box {
   background-color: var(--primary-white-color);
 
   padding-top: 30px;
@@ -690,7 +661,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team .title {
+.team__title {
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -700,59 +671,30 @@ img {
   margin-bottom: 10px;
 }
 
-.team .text {
+.team__text {
   font-size: 16px;
   line-height: calc(18.75 / 16);
 
   margin-bottom: 16px;
 }
 
-.team {
-  background-color: var(--second-grey-color);
-}
-
 /* Социальные сети команды*/
 
-.social-links {
-  display: flex;
-  justify-content: center;
+.team__social {
   padding-left: 32px;
   padding-right: 32px;
 }
 
-.social-links > .item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+.team__link {
   color: var(--clients-primary-color);
-
-  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
+  background-color: var(--primary-white-color);
 }
 
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
+.team__link:hover,
+.team__link:focus {
   color: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
-
-.svg-social {
-  fill: currentColor;
-  width: 20px;
-  height: 20px;
-}
-
-/* Вместо этого - Техника отзывчивых изображений
-.photo-team {
-  display: block;
-}
-*/
 
 /* Постоянные клиенты*/
 .clients {
@@ -761,20 +703,22 @@ img {
   padding-left: 0;
 }
 
-.clients > .item {
+.clients__item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.clients > .item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+
   width: 170px;
   height: 92px;
 
@@ -786,13 +730,13 @@ img {
   transition: color 250ms var(--cubic), border-color 250ms var(--cubic);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.clients-link > .svg-clients {
+.clients__icon {
   fill: currentColor;
   height: 50px;
 }
@@ -834,18 +778,21 @@ img {
   color: var(--accent-color);
 }
 
-.footer-social {
-  margin-left: 70px;
+.about {
+  margin-right: 70px;
+}
+
+.join {
   margin-right: 93px;
 }
 
-.footer-social,
-.footer-subscription {
+.join,
+.subscription {
   padding-top: 15px;
 }
 
-.footer-social__text,
-.footer-subscription-text {
+.join__text,
+.subscription__text {
   color: var(--primary-white-color);
   font-weight: 700;
   text-transform: uppercase;
@@ -853,39 +800,23 @@ img {
   margin-bottom: 20px;
 }
 
-.social-links-webstudio {
-  display: flex;
-  justify-content: center;
-}
-
-.social-links-webstudio > .item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.join-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+/* Социальные сети студии */
+.join__link {
   color: var(--primary-white-color);
   background-color: var(--social-links-ft-bg-color);
-
-  transition: background-color 250ms var(--cubic);
 }
 
-.join-link:hover,
-.join-link:focus {
+.join__link:hover,
+.join__link:focus {
   background-color: var(--accent-color);
 }
 
-.form-subscription-field {
+.subscription__box {
   display: inline-flex;
   align-items: center;
 }
 
-.subscription-input {
+.subscription__input {
   color: var(--contacts-ft-color);
   font-size: 16px;
   line-height: calc(20 / 16);
@@ -898,38 +829,45 @@ img {
   border-radius: 4px;
 
   padding-left: 16px;
-
   margin-right: 12px;
 }
 
-.subscription-input::placeholder {
+.subscription__input::placeholder {
   color: var(--contacts-ft-color);
 }
 
-.svg-subscription {
+.subscription__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 28px;
+}
+
+.subscription__icon {
   fill: currentColor;
   width: 24px;
   height: 24px;
-  /* margin-left: 10px; */
 }
 
 /* Стили для страницы ПОРТФОЛИО */
 
 /* Фильтры портфолио */
-.portfolio-filter {
+.filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.portfolio-filter .item:not(:last-child) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.portfolio .button {
+.filter__button {
   color: var(--title-text-color);
   background-color: var(--second-grey-color);
 
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
@@ -937,12 +875,17 @@ img {
   padding: 6px 22px;
   text-align: center;
 
+  border: 0;
+  border-radius: 4px;
+
+  cursor: pointer;
+
   transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
     box-shadow 250ms var(--cubic);
 }
 
-.portfolio .button:hover,
-.portfolio .button:focus {
+.filter__button:hover,
+.filter__button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -951,14 +894,14 @@ img {
 
 /* Список портфолио */
 
-.portfolio-projects {
+.projects {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--portfolio-projects-gap));
   margin-top: calc(-1 * var(--portfolio-projects-gap));
 }
 
-.portfolio-projects > .item {
+.projects__item {
   flex-basis: calc(100% / 3 - var(--portfolio-projects-gap));
 
   margin-left: var(--portfolio-projects-gap);
@@ -967,43 +910,18 @@ img {
   transition: box-shadow 250ms var(--cubic);
 }
 
-.portfolio-projects > .item:hover,
-.portfolio-projects > .item:focus {
+.projects__item:hover,
+.projects__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* Другая техника сетки три в ряд
-
- calc ((100% - кол-во марджинов в строке * значение марджина ) / кол-во элементов в строке
-
- .portfolio-projects {
-   display: flex;
-  flex-wrap: wrap;
-}
-
-.portfolio-projects .item {
-  width: calc((100% - 60px) / 3);
-
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.portfolio-projects .item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.portfolio-projects .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-} 
-*/
-
-.portfolio-projects-thumb {
+.projects__box {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-overlay {
+.overlay {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -1016,11 +934,11 @@ img {
   transition: transform 250ms var(--cubic);
 }
 
-.portfolio-projects > .item:hover .portfolio-overlay {
+.projects__item:hover .overlay {
   transform: translateY(0);
 }
 
-.portfolio-overlay-about {
+.overlay__text {
   color: var(--primary-white-color);
 
   font-weight: 400;
@@ -1030,13 +948,13 @@ img {
   padding: 63px 24px;
 }
 
-.portfolio-description {
+.projects__description {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-project-border);
   border-top: 0;
 }
 
-.portfolio-description > .title {
+.projects__title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -1047,15 +965,13 @@ img {
   margin-bottom: 4px;
 }
 
-.portfolio-description > .text {
+.projects__text {
   color: var(--primary-text-color);
 
   font-size: 16px;
   line-height: calc(30 / 16);
 }
 
-/* Вместо этого - Техника отзывчивых изображений
-.photo-portfolio {
-  display: block;
+.projects__link {
+  text-decoration: none;
 }
-*/
