@@ -1,0 +1,40 @@
+/* Фильтры портфолио */
+.filter {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filter__button {
+    color: $title-text-color;
+    background-color: $second-grey-color;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+
+    padding: 6px 22px;
+    text-align: center;
+
+    border: 0;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: color 250ms $cubic, background-color 250ms $cubic,
+        box-shadow 250ms $cubic;
+}
+
+.filter__button:hover,
+.filter__button:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}

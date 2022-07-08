@@ -1,0 +1,27 @@
+/*Cоциальные сети -- ОБЩЕЕ */
+.social {
+    @extend %list;
+    @include centered-flex();
+
+    &__item:not(:last-child) {
+            margin-right: 10px;
+        }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+
+        @include transition();
+        @include transition(background-color);
+    }
+
+    &__icon {
+        fill: currentColor;
+        width: 20px;
+        height: 20px;
+    }
+}
