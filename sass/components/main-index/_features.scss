@@ -39,5 +39,9 @@
     &__text {
     font-size: 14px;
     line-height: calc(24 / 14);
+    }
 }
+
+.visually-hidden {
+    @extend %visually-hidden;
 }

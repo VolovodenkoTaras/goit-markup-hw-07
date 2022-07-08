@@ -8,9 +8,10 @@
 }
 
 @mixin centered-flex(
-    $type:flex
+    $type:flex,
+    $justify-content: center
    ) {
     display: $type;
-    justify-content: center;
+    justify-content: $justify-content;
     align-items: center;
    }
