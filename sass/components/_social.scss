@@ -13,8 +13,8 @@
         height: 44px;
         border-radius: 50%;
 
-        @include transition();
-        @include transition(background-color);
+        transition: background-color $transition-duration $transition-function, 
+        color $transition-duration $transition-function;
     }
 
     &__icon {

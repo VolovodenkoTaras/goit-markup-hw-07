@@ -37,8 +37,8 @@
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 
-    @include transition(transform);
-    @include transition(opacity);
+    transition: transform $transition-duration $transition-function,
+    opacity $transition-duration $transition-function;
 }
 
 .btn-close {
@@ -180,8 +180,8 @@
         border-radius: 1px;
         border: 2px solid $title-text-color;
         
-        @include transition(fill);
-        @include transition(border);
+        transition: fill $transition-duration $transition-function,
+        border $transition-duration $transition-function;
         }
     
 /* При клике на чекбоксе меняет иконку */

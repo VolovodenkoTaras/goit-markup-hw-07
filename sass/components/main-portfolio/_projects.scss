@@ -66,8 +66,8 @@
 
     transform: translateY(100%);
 
-    transition: transform 250ms $cubic;
-    
+    @include transition(transform);
+       
     &__text {
             color: $primary-white-color;
     

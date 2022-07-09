@@ -1,7 +1,7 @@
 @mixin transition(
     $property: color,
-    $time: 250ms, 
-    $function: $cubic) {
+    $time: $transition-duration, 
+    $function: $transition-function) {
     transition-property: $property;
     transition-duration: $time;
     transition-timing-function: $function;

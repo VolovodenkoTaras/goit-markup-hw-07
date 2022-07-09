@@ -24,8 +24,8 @@
         border: 1px solid $clients-primary-color;
         border-radius: 4px;
     
-        @include transition();
-        @include transition(border-color);
+        transition: border-color $transition-duration $transition-function,
+        color $transition-duration $transition-function;
        }
          
     &__link:hover,
