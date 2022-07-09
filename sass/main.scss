@@ -1,4 +1,4 @@
-@import "./utils/vars";
+@import "./utils/variables";
 @import "./utils/placeholders";
 @import "./utils/mixins";
 
@@ -16,6 +16,9 @@
 @import "./components/main-index/work";
 @import "./components/main-index/team";
 @import "./components/main-index/clients";
+
+@import "./components/main-portfolio/filter";
+@import "./components/main-portfolio/projects";
 
 @import "./components/page-footer/page-footer";
 @import "./components/page-footer/about";

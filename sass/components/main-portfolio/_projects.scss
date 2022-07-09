@@ -13,7 +13,7 @@
             margin-left: $portfolio-projects-gap;
             margin-top: $portfolio-projects-gap;
     
-            transition: box-shadow 250ms $cubic;
+            @include transition(box-shadow);
         }
 
     &__item:hover,

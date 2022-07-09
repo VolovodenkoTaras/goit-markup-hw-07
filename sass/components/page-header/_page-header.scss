@@ -3,6 +3,6 @@
 
 &__content,
 &__nav {
-@include centered-flex();
+    @include centered-flex();
     }
 }

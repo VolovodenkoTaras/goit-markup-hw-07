@@ -7,9 +7,7 @@
             margin-right: 10px;
         }
     &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include centered-flex();
         text-decoration: none;
         width: 44px;
         height: 44px;

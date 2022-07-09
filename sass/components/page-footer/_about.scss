@@ -3,8 +3,8 @@
 }
 
 .footer-contacts {
-@extend %list;
-margin-top: 20px;
+  @extend %list;
+  margin-top: 20px;
 
     &__item:not(:last-child) {
         margin-bottom: 9px;
@@ -15,7 +15,7 @@ margin-top: 20px;
         font-style: normal;
         line-height: calc(24 / 14);
         text-decoration: none;
-        transition: color 250ms var(--cubic);
+        @include transition();
     }
 
     &__link--white {

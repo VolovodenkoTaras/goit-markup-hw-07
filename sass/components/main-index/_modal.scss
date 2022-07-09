@@ -8,7 +8,7 @@
     background-color: $modal-window-bg-color;
 
     opacity: 1;
-    transition: opacity 250ms $cubic;
+    @include transition(opacity);
 
     &.is-hidden {
             opacity: 0;
@@ -37,7 +37,8 @@
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 
-    transition: transform 250ms $cubic, opacity 250ms $cubic;
+    @include transition(transform);
+    @include transition(opacity);
 }
 
 .btn-close {
@@ -55,7 +56,7 @@
 
     cursor: pointer;
 
-    transition: color 250ms $cubic;
+    @include transition();
 
     &:hover,
     &:focus {
@@ -107,7 +108,7 @@
         font: inherit;
         outline: none;
     
-        transition: border-color 250ms $cubic;
+        @include transition(border-color);
         }
     
     &__icon {
@@ -120,7 +121,8 @@
         width: 18px;
         height: 18px;
     
-        transition: fill 250ms $cubic;
+        @include transition(fill);
+        
         }
     
     &__label:focus-within>&__icon {
@@ -139,7 +141,7 @@
     letter-spacing: 0.01em;
     outline: none;
 
-    transition: border-color 250ms $cubic;
+    @include transition(border-color);
         }   
         
     &__commentary::placeholder {
@@ -177,8 +179,9 @@
     
         border-radius: 1px;
         border: 2px solid $title-text-color;
-    
-        transition: fill 250ms $cubic, border 250ms $cubic;
+        
+        @include transition(fill);
+        @include transition(border);
         }
     
 /* При клике на чекбоксе меняет иконку */

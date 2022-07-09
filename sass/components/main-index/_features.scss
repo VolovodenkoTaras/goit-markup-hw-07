@@ -2,8 +2,7 @@
 
 .features {
     @extend %list;
-    display: flex;
-    justify-content: center;
+    @include centered-flex();
     padding-left: 0;
 
     &__item:not(:last-child) {
@@ -11,9 +10,7 @@
         }
 
     &__box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include centered-flex();
         width: 270px;
         height: 120px;
         margin-bottom: 30px;
@@ -42,6 +39,3 @@
     }
 }
 
-.visually-hidden {
-    @extend %visually-hidden;
-}

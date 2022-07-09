@@ -1,11 +1,11 @@
 .header-contacts {
     @extend %list;
 
-    display: flex;
+    @include centered-flex();
     margin-left: auto;
 
     &__item:last-child {
-            margin-left: 50px;
+    margin-left: 50px;
         }
 
     &__link {
@@ -23,19 +23,20 @@
     &__link:hover,
     &__link:focus {
     color: $accent-color;
-}    
+        }    
 
     &__icon-mail {
     fill: currentColor;
     width: 16px;
     height: 16px;
     margin-right: 10px;
-}
+        }
+
     &__icon-phone {
-        fill: currentColor;
-        width: 16px;
-        height: 16px;
-        margin-right: 10px;
-    }
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+        }
 
 }
